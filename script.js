@@ -1,20 +1,20 @@
-let sumbit= document.getElementById("button");
-console.log(button);
+let sumbit = document.getElementById("button");
+// console.log(button);
 
-sumbit.addEventListener('click',getWords);
+sumbit.addEventListener('click', getWords);
 
-function getWords(){
-console.log(sumbit);
+function getWords() {
+    // console.log(sumbit);
 
-var words= document.querySelectorAll('input[type=text]');
+    var words = document.querySelectorAll('input[type=text]');
 
-var placeholders= document.querySelectorAll('.userInput');
-console.log(placeholders)
+    var placeholders = document.querySelectorAll('.userInput');
+    // console.log(placeholders)
 
-placeholders.forEach((placeholders, index)=> {
-    console.log(placeholders, index);
-});
+    placeholders.forEach((placeholder, index) => {
+        placeholder.innerHTML = words[index].value;
+    });
 
-console.log(2)
+    document.getElementById("story-screen").style.display="block"
 
 }
